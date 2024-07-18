@@ -1,6 +1,10 @@
 function enviarCEP() {
   let cephtml = document.querySelector(".text-box");
   let cep = cephtml.value;
+  if (cep.length !== 8) {
+    window.alert("CEP inválido, digite apenas numeros!");
+    return;
+  }
   let conteudo = document.querySelector(".conteudo");
   conteudo.style.display = "none";
   let timer = document.querySelector(".timer");
@@ -52,4 +56,3 @@ function voltar() {
   document.querySelector(".localidade").innerHTML = "";
   document.querySelector(".uf").innerHTML = "";
 }
-
