@@ -3,6 +3,7 @@ function enviarCEP() {
   let cep = cephtml.value;
   if (cep.length !== 8) {
     window.alert("CEP inválido, digite apenas numeros!");
+    document.querySelector(".text-box").value = " ";
     return;
   }
   let conteudo = document.querySelector(".conteudo");
